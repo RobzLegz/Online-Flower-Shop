@@ -26,6 +26,8 @@ const Header = () => {
             <h1 className="logo">Bēru vainagi</h1>
             <ul className="navLinks">
                 <li><a href="#">Ziedu Grozi</a></li>
+                <li><a href="#">Kontakti</a></li>
+                <li><a href="#">Privātuma Politika</a></li>
                 <li><a href="#"><PersonOutlineIcon /> Ienākt</a></li>
                 <li><a href="#"><ShoppingBasketOutlinedIcon/> Grozs</a></li>
             </ul>

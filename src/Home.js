@@ -69,27 +69,7 @@ const Home = () => {
                         image={ProductImagesix}
                         description="puķes apraksts"
                     />
-                </div>
-                <div className="productRow">
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImageseven}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImageeight}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagenine}
-                        description="puķes apraksts"
-                    />
-                </div>
+                </div>                
                 <div className="productRow">
                     <Product 
                         title="puķes bilde"

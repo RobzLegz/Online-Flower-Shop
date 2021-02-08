@@ -1,10 +1,13 @@
 .header {
   display: flex;
-  background-color: #fff;
+  background: transparent;
   width: 100%;
   height: 60px;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
 }
 .navLinks {
   width: 50%;
@@ -18,14 +21,26 @@
 .navLinks > li > a {
   display: flex;
   align-items: center;
-  color: #638455;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  color: #fff;
 }
 .navLinks > li > a > .MuiSvgIcon-root {
   margin-right: 5px;
 }
 .logo {
   font-family: "Lobster Two", cursive;
+  color: #fff;
+  cursor: pointer;
+}
+.scrolledHeader {
+  background-color: #fff;
+}
+.scrolledHeader > .logo {
   color: #638455;
+}
+.scrolledHeader > .navLinks > li > a {
+  color: #638455 !important;
+  z-index: 10;
+  font-size: 20px;
 }

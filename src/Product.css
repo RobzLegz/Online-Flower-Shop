@@ -24,3 +24,22 @@
   align-items: center;
   flex-direction: column;
 }
+.productButtonsContainer {
+  margin-top: 20px;
+}
+.productButtonsContainer > button {
+  background: #638455;
+  color: #fff;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  border: none;
+  outline: none;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.productButtonsContainer > button:hover {
+  background-color: #2b5735;
+}

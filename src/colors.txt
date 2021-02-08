@@ -1,2 +1,3 @@
 light green: #99D3A6
 dark light green: #638455
+dark green: #2b5735

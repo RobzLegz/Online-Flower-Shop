@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Product.css";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Product = ({title, price, description, image}) => {
     return (
@@ -13,7 +14,7 @@ const Product = ({title, price, description, image}) => {
                 <p>{description}</p>
             </div>
             <div className="productButtonsContainer">
-                <button>Ielikt Grozā</button>
+                <button><ShoppingCartIcon />Ielikt Grozā</button>
             </div>
         </div>
     );

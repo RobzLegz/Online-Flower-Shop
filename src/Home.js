@@ -11,10 +11,6 @@ import ProductImagefour from "./resources/WhatsApp Image 2021-02-08 at 11.08.59.
 import ProductImagefive from "./resources/WhatsApp Image 2021-02-08 at 11.09.00 (1).jpeg";
 import ProductImagesix from "./resources/WhatsApp Image 2021-02-08 at 11.09.00.jpeg";
 
-import ProductImageseven from "./resources/WhatsApp Image 2021-02-08 at 11.09.01 (1).jpeg";
-import ProductImageeight from "./resources/WhatsApp Image 2021-02-08 at 11.09.01.jpeg";
-import ProductImagenine from "./resources/WhatsApp Image 2021-02-08 at 11.09.02.jpeg";
-
 import ProductImageten from "./resources/WhatsApp Image 2021-02-08 at 11.09.03 (1).jpeg";
 import ProductImageeleven from "./resources/WhatsApp Image 2021-02-08 at 11.09.04 (1).jpeg";
 import ProductImagetvelve from "./resources/WhatsApp Image 2021-02-08 at 11.09.04 (2).jpeg";
@@ -30,86 +26,91 @@ const Home = () => {
                 <img className="homeHeaderImage" src={HomeHeaderImage} alt=""/>
             </div>
             <div className="productContainer">
-                <div className="productRow">
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImageone}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagetwo}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagethree}
-                        description="puķes apraksts"
-                    />
+                <div className="productColumn">
+                    <div className="productRow">
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImageone}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagetwo}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagethree}
+                            description="puķes apraksts"
+                        />
+                    </div>
+                    <div className="productRow">
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagefour}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagefive}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagesix}
+                            description="puķes apraksts"
+                        />
+                    </div>              
+                </div>      
+                <div className="productColumn">
+                    <div className="productRow">
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImageten}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImageeleven}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagetvelve}
+                            description="puķes apraksts"
+                        />
+                    </div>
+                    <div className="productRow">
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagethirteen}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagefourteen}
+                            description="puķes apraksts"
+                        />
+                        <Product 
+                            title="puķes bilde"
+                            price={99.99}
+                            image={ProductImagesixteen}
+                            description="puķes apraksts"
+                        />
+                    </div>
                 </div>
-                <div className="productRow">
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagefour}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagefive}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagesix}
-                        description="puķes apraksts"
-                    />
-                </div>                
-                <div className="productRow">
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImageten}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImageeleven}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagetvelve}
-                        description="puķes apraksts"
-                    />
-                </div>
-                <div className="productRow">
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagethirteen}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagefourteen}
-                        description="puķes apraksts"
-                    />
-                    <Product 
-                        title="puķes bilde"
-                        price={99.99}
-                        image={ProductImagesixteen}
-                        description="puķes apraksts"
-                    />
-                </div>
+                
             </div>
         </div>
     );

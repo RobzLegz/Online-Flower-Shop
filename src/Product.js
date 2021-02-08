@@ -12,6 +12,9 @@ const Product = ({title, price, description, image}) => {
                 <h4>{price}€</h4>
                 <p>{description}</p>
             </div>
+            <div className="productButtonsContainer">
+                <button>Ielikt Grozā</button>
+            </div>
         </div>
     );
 }

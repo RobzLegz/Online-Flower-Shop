@@ -37,18 +37,98 @@ const Home = () => {
                         image={ProductImageone}
                         description="puķes apraksts"
                     />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagetwo}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagethree}
+                        description="puķes apraksts"
+                    />
                 </div>
                 <div className="productRow">
-
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagefour}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagefive}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagesix}
+                        description="puķes apraksts"
+                    />
                 </div>
                 <div className="productRow">
-
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImageseven}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImageeight}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagenine}
+                        description="puķes apraksts"
+                    />
                 </div>
                 <div className="productRow">
-
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImageten}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImageeleven}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagetvelve}
+                        description="puķes apraksts"
+                    />
                 </div>
                 <div className="productRow">
-
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagethirteen}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagefourteen}
+                        description="puķes apraksts"
+                    />
+                    <Product 
+                        title="puķes bilde"
+                        price={99.99}
+                        image={ProductImagesixteen}
+                        description="puķes apraksts"
+                    />
                 </div>
             </div>
         </div>

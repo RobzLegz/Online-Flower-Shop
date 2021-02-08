@@ -25,6 +25,10 @@
   font-size: 18px;
   color: #fff;
 }
+.navLinks > li > a:hover {
+  color: #99d3a6;
+  transition: all 0.3s ease;
+}
 .navLinks > li > a > .MuiSvgIcon-root {
   margin-right: 5px;
 }

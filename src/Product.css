@@ -6,6 +6,12 @@
   align-items: center;
   background: #fff;
   border: 3px solid #638455;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.product:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  margin-top: -2px;
 }
 .productImageContainer {
   width: 90%;

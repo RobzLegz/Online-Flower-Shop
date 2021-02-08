@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Product.css";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Popup from './Popup';
 
 const Product = ({title, price, description, image}) => {
 
@@ -17,7 +16,6 @@ const Product = ({title, price, description, image}) => {
             <div className="productButtonsContainer">
                 <button><ShoppingCartIcon />Ielikt Grozā</button>
             </div>
-            <Popup description={description} image={image} price={price} title={title} />
         </div>
     );
 }

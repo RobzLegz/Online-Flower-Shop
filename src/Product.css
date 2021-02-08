@@ -62,8 +62,7 @@
 }
 @media (max-width: 1180px) {
   .product {
-    width: 350px;
-    height: 500px;
+    width: 270px;
     margin: 30px 0;
   }
   .productImageContainer {

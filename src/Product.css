@@ -48,5 +48,35 @@
 @media (max-width: 1460px) {
   .product {
     width: 350px;
+    height: 450px;
+  }
+  .productImageContainer {
+    height: 50%;
+  }
+}
+@media (max-width: 1290px) {
+  .product {
+    width: 300px;
+    height: 430px;
+  }
+}
+@media (max-width: 1180px) {
+  .product {
+    width: 350px;
+    height: 500px;
+    margin: 30px 0;
+  }
+  .productImageContainer {
+    height: 60%;
+  }
+}
+@media (max-width: 970px) {
+  .product {
+    width: 300px;
+    height: 450px;
+    margin: 30px 0;
+  }
+  .productImageContainer {
+    height: 60%;
   }
 }

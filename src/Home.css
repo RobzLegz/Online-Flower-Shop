@@ -19,6 +19,13 @@
   flex-direction: column;
   align-items: center;
 }
+.productColumn {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .productRow {
   width: 80%;
   display: flex;
@@ -34,5 +41,14 @@
 @media (max-width: 1600px) {
   .productRow {
     width: 100%;
+  }
+}
+@media (max-width: 1080px) {
+  .productColumn {
+    flex-direction: row;
+  }
+  .productRow {
+    flex-direction: column;
+    align-items: center;
   }
 }

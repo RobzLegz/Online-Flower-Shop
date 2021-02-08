@@ -1,0 +1,18 @@
+.product {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #638455;
+}
+.productImageContainer {
+  width: 380px;
+  height: 380px;
+  margin-top: 10px;
+}
+.productImageContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

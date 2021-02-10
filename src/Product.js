@@ -3,13 +3,27 @@ import "./Product.css";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AboutProductPage from './AboutProductPage';
 import SearchIcon from '@material-ui/icons/Search';
+import {useStateValue} from "./StateProvider";
 
-const Product = ({title, price, description, image}) => {
+const Product = ({title, price, description, image, id}) => {
 
     const [popupPageState, setPopupPageState] = useState("invisiblePopup");
+    const [{basket}, dispatch] = useStateValue();
 
     const togglePopupPageVisibility = () => {
         setPopupPageState("visiblePopup");
+    }
+
+    const addToCart = () => {
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+            },
+        });
     }
 
     return (

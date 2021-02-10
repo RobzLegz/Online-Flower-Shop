@@ -29,18 +29,21 @@ const Home = () => {
                 <div className="productColumn">
                     <div className="productRow">
                         <Product 
+                            id="123456789"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImageone}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="3476745734675"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagetwo}
                             description="puķes apraksts"
                         />
-                        <Product 
+                        <Product
+                            id="4567345732" 
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagethree}
@@ -49,18 +52,21 @@ const Home = () => {
                     </div>
                     <div className="productRow">
                         <Product 
+                            id="045692709"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagefour}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="45678949562789"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagefive}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="3456786534789"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagesix}
@@ -71,18 +77,21 @@ const Home = () => {
                 <div className="productColumn">
                     <div className="productRow">
                         <Product 
+                            id="765435667"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImageten}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="4556735434"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImageeleven}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="537467846"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagetvelve}
@@ -91,18 +100,21 @@ const Home = () => {
                     </div>
                     <div className="productRow">
                         <Product 
+                            id="0304204"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagethirteen}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="084238745320"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagefourteen}
                             description="puķes apraksts"
                         />
                         <Product 
+                            id="34563463254329"
                             title="puķes bilde"
                             price={99.99}
                             image={ProductImagesixteen}

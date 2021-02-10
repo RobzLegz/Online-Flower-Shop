@@ -1,11 +1,26 @@
 import React from 'react';
 import "./AboutProductPage.css";
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import { useStateValue } from './StateProvider';
 
-const AboutProductPage = ({title, price, description, image, popupPageState, setPopupPageState}) => {
+const AboutProductPage = ({id, title, price, description, image, popupPageState, setPopupPageState}) => {
+
+    const [{basket}, dispatch] = useStateValue();
 
     const togglePopupState = () => {
         setPopupPageState("invisiblePopup")
+    }
+
+    const addToCart = () => {
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+            },
+        });
     }
 
     return (
@@ -19,6 +34,7 @@ const AboutProductPage = ({title, price, description, image, popupPageState, set
                         <h3>{price}€</h3>
                     </div>                
                     <p>{description}</p>
+                    <button>Ielikt Grozā</button>
                 </div>
             </div>
         </div>

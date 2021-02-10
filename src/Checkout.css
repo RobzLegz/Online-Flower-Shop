@@ -1,11 +1,13 @@
 .checkout {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .checkoutItems {
-  width: 40%;
+  width: 30vw;
   height: 60vh;
-  margin: 20vh 0;
   overflow-y: scroll;
+  margin-top: 20vh;
   background-color: #f7f7f7;
 }

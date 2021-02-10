@@ -51,3 +51,6 @@
 .scrolledHeader > .navLinks > li > a:hover {
   color: #638455;
 }
+.header-basket-count {
+  margin-left: 4px;
+}

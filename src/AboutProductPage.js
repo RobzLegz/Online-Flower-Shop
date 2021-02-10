@@ -35,7 +35,7 @@ const AboutProductPage = ({id, title, price, description, image, popupPageState,
                         <h3>{price}€</h3>
                     </div>                
                     <p>{description}</p>
-                    <button><ShoppingCartIcon />Ielikt Grozā</button>
+                    <button onClick={addToCart}><ShoppingCartIcon />Ielikt Grozā</button>
                 </div>
             </div>
         </div>

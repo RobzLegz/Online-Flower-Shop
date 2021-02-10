@@ -25,10 +25,6 @@ export const reducer = (state, action) => {
                 ...state,
                 basket: newBasket
             }
-        case "CLEAR_BASKET":
-            return{
-                basket: [],
-            }
         default: 
             return state;
     }

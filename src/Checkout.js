@@ -9,7 +9,7 @@ const Checkout = () => {
 
     return (
         <div className="checkout">            
-            <div className="checkout-left">
+            <div className="checkoutItems">
                 {basket.map(item => (
                     <CheckoutProduct 
                         id={item.id}

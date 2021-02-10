@@ -1,0 +1,11 @@
+.checkout {
+  display: grid;
+  place-items: center;
+}
+.checkoutItems {
+  width: 40%;
+  height: 60vh;
+  margin: 20vh 0;
+  overflow-y: scroll;
+  background-color: #f7f7f7;
+}

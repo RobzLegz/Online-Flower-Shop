@@ -8,12 +8,10 @@ const CheckoutProduct = ({id, image, title, price}) => {
 
     return (
         <div className="checkoutProduct">
-            <img src={image} alt="checkout image" className="checkout-image"/>
+            <img src={image} alt={title} className="checkout-image"/>
             <div className="checkout-product-info">
                 <p className="checkout-product-title">{title}</p>
-                <p className="checkout-product-price">
-                    <strong>{price}€</strong>
-                </p>
+                <p className="checkout-product-price"><strong>{price}€</strong></p>
                 <button>Remove from basket</button>
             </div>
         </div>

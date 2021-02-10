@@ -10,11 +10,11 @@ const App = () => {
     <div className="app">
       <BrowserRouter>
         <Switch>
-          <Route path="/checkout" exact>
+          <Route path="/checkout" >
             <Header />
             <Checkout />
           </Route>
-          <Route path="/" exact>
+          <Route path="/" >
             <Header />
             <Home />
           </Route>          

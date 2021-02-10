@@ -46,7 +46,7 @@
 }
 .scrolledHeader > .navLinks > li > a {
   color: #638455 !important;
-  z-index: 10;
+  z-index: 100;
   font-size: 20px;
   cursor: pointer;
 }
@@ -55,4 +55,20 @@
 }
 .header-basket-count {
   margin-left: 4px;
+}
+.headerLinkTag {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerLinkTag > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrolledHeader > .headerLinkTag > .logo {
+  color: #638455 !important;
 }

@@ -20,9 +20,50 @@
   opacity: 1 !important;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 .aboutProductPopup > img {
-  width: 400px;
-  height: 300px;
+  width: 30%;
+  height: 70%;
   object-fit: cover;
+  margin-left: 50px;
+}
+.aboutProductPopup > button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #638455;
+  width: 150px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+}
+.aboutProductPopup > button > .MuiSvgIcon-root {
+  font-size: 18px !important;
+  margin-right: 2px;
+}
+.aboutProductPopup > button:hover {
+  background: #2b5735;
+}
+.popupInfo {
+  margin-right: 50px;
+  height: 400px;
+  background-color: #f9f9f9;
+  width: 55%;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+.priceAboutContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }

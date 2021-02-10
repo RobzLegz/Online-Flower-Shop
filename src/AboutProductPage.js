@@ -1,5 +1,6 @@
 import React from 'react';
 import "./AboutProductPage.css";
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 const AboutProductPage = ({title, price, description, image, popupPageState, setPopupPageState}) => {
 
@@ -10,11 +11,15 @@ const AboutProductPage = ({title, price, description, image, popupPageState, set
     return (
         <div className={popupPageState}>
             <div className="aboutProductPopup">
-                <button onClick={togglePopupState}>Close</button>
-                <h2>{title}</h2>
-                <h3>{price}</h3>
                 <img src={image} alt={title}/>
-                <p>{description}</p>
+                <button onClick={togglePopupState}><HighlightOffIcon />Aizvērt</button>
+                <div className="popupInfo">
+                    <div className="priceAboutContainer">
+                        <h2>{title}</h2>
+                        <h3>{price}€</h3>
+                    </div>                
+                    <p>{description}</p>
+                </div>
             </div>
         </div>
     );

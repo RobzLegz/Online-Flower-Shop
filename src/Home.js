@@ -30,47 +30,47 @@ const Home = () => {
                     <div className="productRow">
                         <Product 
                             id="123456789"
-                            title="puķes bilde"
-                            price={99.99}
+                            title="Sēru vainags ar sarkanām rozēm"
+                            price={95}
                             image={ProductImageone}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="3476745734675"
-                            title="puķes bilde"
-                            price={99.99}
+                            title="Sēru vainags"
+                            price={99}
                             image={ProductImagetwo}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product
                             id="4567345732" 
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImagethree}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                     </div>
                     <div className="productRow">
                         <Product 
                             id="045692709"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImagefour}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="45678949562789"
-                            title="puķes bilde"
-                            price={99.99}
+                            title="Sēru štrauss"
+                            price={48}
                             image={ProductImagefive}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="3456786534789"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImagesix}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                     </div>              
                 </div>      
@@ -78,47 +78,47 @@ const Home = () => {
                     <div className="productRow">
                         <Product 
                             id="765435667"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImageten}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="4556735434"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImageeleven}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="537467846"
-                            title="puķes bilde"
-                            price={99.99}
+                            title="Sēru štrauss"
+                            price={48}
                             image={ProductImagetvelve}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                     </div>
                     <div className="productRow">
                         <Product 
                             id="0304204"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImagethirteen}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="084238745320"
-                            title="puķes bilde"
+                            title="Sēru vainags"
                             price={99.99}
                             image={ProductImagefourteen}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                         <Product 
                             id="34563463254329"
-                            title="puķes bilde"
-                            price={99.99}
+                            title="Sēru pušķis"
+                            price={38}
                             image={ProductImagesixteen}
-                            description="puķes apraksts"
+                            description="Mēs izmantojam tikai oriģinālus mūsu floristu veidotus ziedu kompozīciju attēlus. Bildei ir ilustratīva nozīme, jo ziedi ir sezonāli. Ja konkrētie ziedi nebūs pieejami, mēs tos aizvietosim ar citiem, saglabājot konkrēto stilu un krāsu gammu. Mūsu profesionālie floristi vienmēr rūpējas par to, lai kompozīcijas būtu gaumīgas, skaistas un klienti - apmierināti. Ja vēlaties precizēt, vai bildē redzamie ziedi ir dotajā brīdī pieejami, lūdzu, sazinieties ar mums, zvanot - +371 26621676 vai rakstot uz - karkade@karkade.lv."
                         />
                     </div>
                 </div>

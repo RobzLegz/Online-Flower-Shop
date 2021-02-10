@@ -2,13 +2,17 @@ import React from 'react';
 import "./Checkout.css";
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
+import TotalCost from './TotalCost';
 
 const Checkout = () => {
 
     const [{basket}, dispatch] = useStateValue();
 
     return (
-        <div className="checkout">            
+        <div className="checkout">
+            <div className="totalContainer">
+                <TotalCost />       
+            </div>         
             <div className="checkoutItems">
                 {basket.map(item => (
                     <CheckoutProduct 

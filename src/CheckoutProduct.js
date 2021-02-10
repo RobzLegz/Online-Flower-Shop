@@ -7,6 +7,13 @@ const CheckoutProduct = ({id, image, title, price}) => {
 
     const [{basket}, dispatch] = useStateValue();
 
+    const removeCartItem = () => {
+        dispatch({
+            type: "REMOVE_FROM_BASKET",
+            id: id,
+        })
+    };
+
     return (
         <div className="checkoutProduct">
             <img src={image} alt={title} className="checkout-image"/>
@@ -15,7 +22,7 @@ const CheckoutProduct = ({id, image, title, price}) => {
                 <p className="checkout-product-price"><strong>{price}€</strong></p>
                 
             </div>
-            <button><DeleteIcon /></button>
+            <button onClick={removeCartItem}><DeleteIcon /></button>
         </div>
     )
 }

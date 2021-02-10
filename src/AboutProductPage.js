@@ -2,6 +2,7 @@ import React from 'react';
 import "./AboutProductPage.css";
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import { useStateValue } from './StateProvider';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const AboutProductPage = ({id, title, price, description, image, popupPageState, setPopupPageState}) => {
 
@@ -34,7 +35,7 @@ const AboutProductPage = ({id, title, price, description, image, popupPageState,
                         <h3>{price}€</h3>
                     </div>                
                     <p>{description}</p>
-                    <button>Ielikt Grozā</button>
+                    <button><ShoppingCartIcon />Ielikt Grozā</button>
                 </div>
             </div>
         </div>

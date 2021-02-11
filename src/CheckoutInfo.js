@@ -9,6 +9,13 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [orderEmail, setOrderEmail] = useState("");
     const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
 
+    const registerOrder = (e) => {
+        e.preventDefault()
+        console.log(orderName)
+        console.log(orderEmail)
+        console.log(orderPhoneNumber)
+    }
+
     return (
         <div className={checkoutState}>
             <div className="checkoutForm">
@@ -17,13 +24,13 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                 <div className="checkoutInputs">
                     <form className="checkoutInputs">
                         <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
-                        <input type="email" placeholder="E-pasts" required name="email" />
-                        <input type="number" placeholder="Telefona nr." required name="phone" />
+                        <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
+                        <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
                         <div className="checkbox-container">
                             <p>Es piekrītu noteikumiem un privātuma politikai</p>
                             <input type="checkbox" required/>
                         </div>
-                        <button type="submit" onClick={(e) => e.preventDefault()}>Turpināt</button>
+                        <button type="submit" onClick={registerOrder}>Turpināt</button>
                     </form>
                 </div>
             </div>

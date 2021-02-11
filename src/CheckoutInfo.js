@@ -16,7 +16,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                 <h2>Apmaksāt</h2>
                 <div className="checkoutInputs">
                     <form className="checkoutInputs">
-                        <input type="text" placeholder="Vārds" autoComplete="off" required name="name" />
+                        <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
                         <input type="email" placeholder="E-pasts" required name="email" />
                         <input type="number" placeholder="Telefona nr." required name="phone" />
                         <div className="checkbox-container">

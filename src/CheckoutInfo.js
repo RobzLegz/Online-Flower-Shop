@@ -81,7 +81,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                             minDetail="month"
                             maxDetail="month"
                             defaultView="month"
-                            
+                            tileDisabled={({ date }) => date.getDay() === 0}
                         />
                         <button className={orderButtonState === false ? "noOrdersAllowedButton" : "ordersAllowedButton"} type="submit" onClick={registerOrder}>Turpināt</button>
                     </form>

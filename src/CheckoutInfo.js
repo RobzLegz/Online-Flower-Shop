@@ -6,6 +6,9 @@ import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
 import { useHistory } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
@@ -16,19 +19,31 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [orderAddress, setOrderAddress] = useState("");
     const [orderButtonState, setOrderButtonState] = useState(false)
     const [{basket}, dispatch] = useStateValue();
+    const [calendarValue, setCalendarValue] = useState(new Date());
 
     const registerOrder = (e) => {
-        e.preventDefault()
+        e.preventDefault();        
         if(getBasketTotal(basket) === 0){
             alert("Jūsu grozs ir tukšs");
             return;            
         }
-        console.log(orderName)
-        console.log(orderEmail)
-        console.log(orderPhoneNumber)
-        console.log(orderAddress)
-        console.log(basket)
-        console.log(getBasketTotal(basket))
+        if(orderName === ""){
+            alert("Lūdzu norādiet savu vārdu")
+            return;
+        }else if(orderEmail === ""){
+            alert("Lūdzu norādiet savu e-pastu")
+            return;
+        }else if(orderPhoneNumber === ""){
+            alert("Lūdzu norādiet savu telefona numuru")
+            return;
+        }else if(orderAddress === ""){
+            alert("Lūdzu norādiet savu adresi")
+            return;
+        }
+        setOrderEmail("");
+        setOrderName("");
+        setOrderPhoneNumber("");
+        setOrderAddress("");
         db.collection("orders").add({
             name: orderName,
             email: orderEmail,
@@ -57,6 +72,10 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                             <p>Es piekrītu noteikumiem un <strong onClick={() => history.push("/privacy")}>privātuma politikai</strong></p>
                             <input type="checkbox" required onChange={() => setOrderButtonState(!orderButtonState)} />
                         </div>
+                        <Calendar
+                            onChange={setCalendarValue}
+                            value={calendarValue}
+                        />
                         <button className={orderButtonState === false ? "noOrdersAllowedButton" : "ordersAllowedButton"} type="submit" onClick={registerOrder}>Turpināt</button>
                     </form>
                 </div>

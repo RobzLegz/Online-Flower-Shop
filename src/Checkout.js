@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Checkout.css";
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
@@ -9,6 +9,7 @@ import CheckoutInfo from './CheckoutInfo';
 const Checkout = () => {
 
     const [{basket}, dispatch] = useStateValue();
+    const [checkoutState, setCheckoutState] = useState("hiddenCheckoutInfo")
 
     return (
         <div className="checkout">
@@ -27,9 +28,9 @@ const Checkout = () => {
                 ))}
             </div>
             <div className="checkoutButtonClontainer">
-                <button><DoneIcon />Pasūtīt</button>
+                <button onClick={() => setCheckoutState("checkoutInfo")}><DoneIcon />Pasūtīt</button>
             </div>
-            <CheckoutInfo />
+            <CheckoutInfo checkoutState={checkoutState} setCheckoutState={setCheckoutState} />
         </div>
     )
 }

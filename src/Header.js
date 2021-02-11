@@ -33,7 +33,7 @@ const Header = () => {
             <ul className="navLinks">
                 <li><a onClick={() => history.push("/")}>Vainagi</a></li>
                 <li><a>Kontakti</a></li>
-                <li><a>Privātuma Politika</a></li>
+                <li><a onClick={() => history.push("/privacy")}>Privātuma Politika</a></li>
                 <li><a><PersonOutlineIcon /> Ienākt</a></li>                
                 <li><a onClick={() => history.push("/checkout")}><ShoppingBasketOutlinedIcon/> Grozs |<span className="header-basket-count">{basket?.length}</span></a></li>                
             </ul>

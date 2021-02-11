@@ -4,6 +4,7 @@ import './App.css';
 import Checkout from './Checkout';
 import Header from './Header';
 import Home from './Home';
+import PrivacyPage from './PrivacyPage';
 
 const App = () => {
   return (
@@ -13,6 +14,10 @@ const App = () => {
           <Route path="/checkout" >
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/privacy">
+            <Header />
+            <PrivacyPage />
           </Route>
           <Route path="/" >
             <Header />

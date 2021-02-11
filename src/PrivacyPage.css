@@ -1,0 +1,21 @@
+.privacyPolitics {
+  width: 100%;
+  padding: 10%;
+}
+.privacyPolitics > h2 {
+  font-size: 1.5rem;
+  margin: 10px 0 20px 0;
+}
+.privacyPolitics > p {
+  color: #555;
+  margin: 20px 0;
+}
+.privacyPolitics > ul {
+  list-style: square;
+}
+.privacyPolitics > ul > li {
+  color: #333;
+}
+.privacyPolitics > p > strong {
+  color: #2b5735;
+}

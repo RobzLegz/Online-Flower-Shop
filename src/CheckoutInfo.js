@@ -18,7 +18,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                             <p>Es piekrītu noteikumiem un privātuma politikai</p>
                             <input type="checkbox" required/>
                         </div>
-                        <button type="submit">Turpināt</button>
+                        <button type="submit" onClick={(e) => e.preventDefault()}>Turpināt</button>
                     </form>
                 </div>
             </div>

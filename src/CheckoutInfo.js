@@ -4,6 +4,7 @@ import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
+import { getBasketTotal } from './reducer';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
@@ -18,10 +19,13 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         console.log(orderEmail)
         console.log(orderPhoneNumber)
         console.log(basket)
+        console.log(getBasketTotal(basket))
         db.collection("orders").add({
             name: orderName,
             email: orderEmail,
             number: orderPhoneNumber,
+            order: basket,
+            orderValue: getBasketTotal(basket),
         })
     }
 

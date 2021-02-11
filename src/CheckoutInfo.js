@@ -75,6 +75,8 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <Calendar
                             onChange={setCalendarValue}
                             value={calendarValue}
+                            allowPartialRange={true}
+                            defaultActiveStartDate="tomorrow"
                         />
                         <button className={orderButtonState === false ? "noOrdersAllowedButton" : "ordersAllowedButton"} type="submit" onClick={registerOrder}>Turpināt</button>
                     </form>

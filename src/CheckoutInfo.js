@@ -19,6 +19,10 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
     const registerOrder = (e) => {
         e.preventDefault()
+        if(getBasketTotal(basket) === 0){
+            alert("Jūsu grozs ir tukšs");
+            return;            
+        }
         console.log(orderName)
         console.log(orderEmail)
         console.log(orderPhoneNumber)
@@ -31,7 +35,10 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             number: orderPhoneNumber,
             address: orderAddress,
             order: basket,
-            orderValue: getBasketTotal(basket),
+            orderValue: getBasketTotal(basket) + "€",
+        }).catch((error) => {
+            alert(error);
+            return;
         })
     }
 

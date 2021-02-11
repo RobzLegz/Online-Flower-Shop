@@ -3,18 +3,21 @@ import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
 import db from './firebase';
+import { useStateValue } from './StateProvider';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
     const [orderName, setOrderName] = useState("");
     const [orderEmail, setOrderEmail] = useState("");
     const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
+    const [{basket}, dispatch] = useStateValue();
 
     const registerOrder = (e) => {
         e.preventDefault()
         console.log(orderName)
         console.log(orderEmail)
         console.log(orderPhoneNumber)
+        console.log(basket)
         db.collection("orders").add({
             name: orderName,
             email: orderEmail,

@@ -21,6 +21,9 @@
   justify-content: center;
   margin-top: 10px;
 }
+.copyrightContainer > p {
+  pointer-events: none;
+}
 .footerColumn > h2 {
   font-size: 1.1rem;
 }
@@ -32,10 +35,12 @@
 }
 .footerColumn > p:hover {
   color: #2b5735;
+  text-decoration: underline;
 }
 .noEffectColumn > p:hover {
   color: #333;
   cursor: auto;
+  text-decoration: none;
 }
 .noEffectColumn > p > strong {
   color: #2b5735;

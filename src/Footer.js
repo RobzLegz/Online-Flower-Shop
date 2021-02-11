@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
                 <div className="footerColumn noEffectColumn">
                     <h2>VEIKALA INFORMĀCIJA</h2>
-                    <p>Ziedu Serviss</p>
+                    <p>Bēru Vainagi</p>
                     <p>SIA "Karkadē"</p>
                     <p>Tērbatas iela 19/21, Rīga, LV-1010</p>
                     <p>Reg.nr.50103327811</p>

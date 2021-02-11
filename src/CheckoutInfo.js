@@ -5,9 +5,11 @@ import TotalCost from './TotalCost';
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
+import { useHistory } from 'react-router-dom';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
+    const history = useHistory();
     const [orderName, setOrderName] = useState("");
     const [orderEmail, setOrderEmail] = useState("");
     const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
@@ -45,7 +47,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
                         <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" required autoComplete="off" />
                         <div className="checkbox-container">
-                            <p>Es piekrītu noteikumiem un privātuma politikai</p>
+                            <p>Es piekrītu noteikumiem un <strong onClick={() => history.push("/privacy")}>privātuma politikai</strong></p>
                             <input type="checkbox" required onChange={() => setOrderButtonState(!orderButtonState)} />
                         </div>
                         <button className={orderButtonState === false ? "noOrdersAllowedButton" : "ordersAllowedButton"} type="submit" onClick={registerOrder}>Turpināt</button>

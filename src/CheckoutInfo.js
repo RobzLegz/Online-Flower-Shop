@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
+
+    const [orderName, setOrderName] = useState("");
+    const [orderEmail, setOrderEmail] = useState("");
+    const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
+
     return (
         <div className={checkoutState}>
             <div className="checkoutForm">

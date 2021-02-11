@@ -86,7 +86,22 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
-.checkoutInputs > button {
+.noOrdersAllowedButton {
+  background-color: #a6aca7;
+  width: 150px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  outline: none;
+  border: none;
+}
+
+.ordersAllowedButton {
   background-color: #2b5735;
   width: 150px;
   color: #fff;

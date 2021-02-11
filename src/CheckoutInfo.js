@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
+import db from './firebase';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
@@ -14,6 +15,11 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         console.log(orderName)
         console.log(orderEmail)
         console.log(orderPhoneNumber)
+        db.collection("orders").add({
+            name: orderName,
+            email: orderEmail,
+            number: orderPhoneNumber,
+        })
     }
 
     return (

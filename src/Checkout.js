@@ -3,6 +3,7 @@ import "./Checkout.css";
 import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import TotalCost from './TotalCost';
+import DoneIcon from '@material-ui/icons/Done';
 
 const Checkout = () => {
 
@@ -23,6 +24,9 @@ const Checkout = () => {
                         rating={item.rating}
                     />
                 ))}
+            </div>
+            <div className="checkoutButtonClontainer">
+                <button><DoneIcon />Pasūtīt</button>
             </div>
         </div>
     )

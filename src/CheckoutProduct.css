@@ -27,3 +27,9 @@
 .checkoutProduct > button > .MuiSvgIcon-root {
   font-size: 25px !important;
 }
+.checkout-product-info {
+  display: flex;
+}
+.checkout-product-info > h4 {
+  margin-right: 10px;
+}

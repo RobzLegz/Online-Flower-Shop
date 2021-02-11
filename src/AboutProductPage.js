@@ -6,22 +6,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const AboutProductPage = ({id, title, price, description, image, popupPageState, setPopupPageState}) => {
 
-    const [{basket}, dispatch] = useStateValue();
-
     const togglePopupState = () => {
         setPopupPageState("invisiblePopup")
-    }
-
-    const addToCart = () => {
-        dispatch({
-            type: "ADD_TO_BASKET",
-            item: {
-                id: id,
-                title: title,
-                image: image,
-                price: price,
-            },
-        });
     }
 
     return (
@@ -35,7 +21,6 @@ const AboutProductPage = ({id, title, price, description, image, popupPageState,
                         <h3>{price}€</h3>
                     </div>                
                     <p>{description}</p>
-                    <button onClick={addToCart}><ShoppingCartIcon />Ielikt Grozā</button>
                 </div>
             </div>
         </div>

@@ -127,3 +127,14 @@ input[type="number"] {
   text-decoration: underline;
   cursor: pointer;
 }
+.onSpotContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+.onSpotContainer > input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}

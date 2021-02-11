@@ -28,16 +28,19 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             return;            
         }
         if(orderName === ""){
-            alert("Lūdzu norādiet savu vārdu")
+            alert("Lūdzu norādiet savu vārdu!");
             return;
         }else if(orderEmail === ""){
-            alert("Lūdzu norādiet savu e-pastu")
+            alert("Lūdzu norādiet savu e-pastu!");
             return;
         }else if(orderPhoneNumber === ""){
-            alert("Lūdzu norādiet savu telefona numuru")
+            alert("Lūdzu norādiet savu telefona numuru!");
             return;
         }else if(orderAddress === ""){
-            alert("Lūdzu norādiet savu adresi")
+            alert("Lūdzu norādiet savu adresi!");
+            return;
+        }else if(calendarValue === new Date()) {
+            alert("Uz šodienu pasūtījumu nevar veikt!");
             return;
         }
         setOrderEmail("");
@@ -49,12 +52,11 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             email: orderEmail,
             number: orderPhoneNumber,
             address: orderAddress,
+            orderDate: calendarValue,
             order: basket,
-            orderValue: getBasketTotal(basket) + "€",
-        }).catch((error) => {
-            alert(error);
-            return;
+            orderValue: getBasketTotal(basket) + "€",            
         })
+        alert("Pasūtījums noformēts")
     }
 
     return (
@@ -67,10 +69,10 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
                         <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
-                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" required autoComplete="off" />
-                        <div className="checkbox-container">
-                            <p>Es piekrītu noteikumiem un <strong onClick={() => history.push("/privacy")}>privātuma politikai</strong></p>
-                            <input type="checkbox" required onChange={() => setOrderButtonState(!orderButtonState)} />
+                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Pilsēta... Adrese" required autoComplete="off" />
+                        <div className="onSpotContainer">
+                            <p>Saņemšu uz vietas</p>
+                            <input type="checkbox" value={orderAddress} onChange={() => setOrderAddress("UZ VIETAS")}  required />
                         </div>
                         <Calendar
                             onChange={setCalendarValue}
@@ -82,7 +84,12 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                             maxDetail="month"
                             defaultView="month"
                             tileDisabled={({ date }) => date.getDay() === 0}
+                            minDate={new Date() }
                         />
+                        <div className="checkbox-container">
+                            <p>Es piekrītu noteikumiem un <strong onClick={() => history.push("/privacy")}>privātuma politikai</strong></p>
+                            <input type="checkbox" required onChange={() => setOrderButtonState(!orderButtonState)} />
+                        </div>
                         <button className={orderButtonState === false ? "noOrdersAllowedButton" : "ordersAllowedButton"} type="submit" onClick={registerOrder}>Turpināt</button>
                     </form>
                 </div>

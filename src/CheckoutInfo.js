@@ -19,12 +19,14 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         console.log(orderName)
         console.log(orderEmail)
         console.log(orderPhoneNumber)
+        console.log(orderAddress)
         console.log(basket)
         console.log(getBasketTotal(basket))
         db.collection("orders").add({
             name: orderName,
             email: orderEmail,
             number: orderPhoneNumber,
+            address: orderAddress,
             order: basket,
             orderValue: getBasketTotal(basket),
         })
@@ -40,7 +42,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
                         <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
-                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" />
+                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" required />
                         <div className="checkbox-container">
                             <p>Es piekrītu noteikumiem un privātuma politikai</p>
                             <input type="checkbox" required/>

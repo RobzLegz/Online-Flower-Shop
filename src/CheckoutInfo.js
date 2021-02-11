@@ -11,6 +11,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [orderName, setOrderName] = useState("");
     const [orderEmail, setOrderEmail] = useState("");
     const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
+    const [orderAddress, setOrderAddress] = useState("");
     const [{basket}, dispatch] = useStateValue();
 
     const registerOrder = (e) => {
@@ -39,6 +40,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
                         <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
+                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" />
                         <div className="checkbox-container">
                             <p>Es piekrītu noteikumiem un privātuma politikai</p>
                             <input type="checkbox" required/>

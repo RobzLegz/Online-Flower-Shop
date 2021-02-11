@@ -100,3 +100,8 @@ input[type="number"] {
   outline: none;
   border: none;
 }
+.totalCostComponent {
+  position: absolute;
+  right: 430px;
+  top: 18vh;
+}

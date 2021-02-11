@@ -1,6 +1,7 @@
 import React from 'react';
 import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
+import TotalCost from './TotalCost';
 
 const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     return (
@@ -20,6 +21,9 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <button type="submit">Turpināt</button>
                     </form>
                 </div>
+            </div>
+            <div className="totalCostComponent">
+                <TotalCost />
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import TotalCost from './TotalCost';
 import DoneIcon from '@material-ui/icons/Done';
+import CheckoutInfo from './CheckoutInfo';
 
 const Checkout = () => {
 
@@ -28,6 +29,7 @@ const Checkout = () => {
             <div className="checkoutButtonClontainer">
                 <button><DoneIcon />Pasūtīt</button>
             </div>
+            <CheckoutInfo />
         </div>
     )
 }

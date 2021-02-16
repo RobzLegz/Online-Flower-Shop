@@ -65,6 +65,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
                         <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
+                        <select></select>
                         <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Pilsēta... Adrese" required autoComplete="off" />
                         <div className="onSpotContainer">
                             <p>Saņemšu uz vietas</p>

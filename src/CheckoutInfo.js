@@ -20,6 +20,12 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [orderButtonState, setOrderButtonState] = useState(false)
     const [{basket}, dispatch] = useStateValue();
     const [calendarValue, setCalendarValue] = useState(new Date());
+    const [orderCity, setOrderCity] = useState("");
+
+    const onSpotTake = () => {
+        setOrderAddress("UZ VIETAS");
+        setOrderCity("UZ VIETAS");
+    }
 
     const registerOrder = (e) => {
         e.preventDefault();        
@@ -67,16 +73,16 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
                         <div className="selectCityContainer">
                             <h4>Pilsēta:</h4>
-                            <select>
+                            <select value={orderCity} onCha>
                                 <option>UZ VIETAS</option>
                                 <option>Rīga</option>
                                 <option>Jūrmala</option>
                             </select>
                         </div>
-                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Pilsēta... Adrese" required autoComplete="off" />
+                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" required autoComplete="off" />
                         <div className="onSpotContainer">
                             <p>Saņemšu uz vietas</p>
-                            <input type="checkbox" value={orderAddress} onChange={() => setOrderAddress("UZ VIETAS")}  required />
+                            <input type="checkbox" value={orderAddress} onChange={onSpotTake}  required />
                         </div>
                         <Calendar
                             onChange={setCalendarValue}

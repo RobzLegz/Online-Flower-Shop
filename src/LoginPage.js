@@ -13,9 +13,10 @@ const LoginPage = () => {
     const checkLogin = (e) => {
         e.preventDefault();
         if(usernameInput === userName && passwordInput === password){
-            alert("working")
+            alert("working");
+            history.push("/");
         }else{
-            alert("Nepaireizs lietotājvārds vai parole")
+            alert("Nepaireizs lietotājvārds vai parole");
         }
     }
 

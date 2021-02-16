@@ -73,7 +73,8 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                         <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
                         <div className="selectCityContainer">
                             <h4>Pilsēta:</h4>
-                            <select value={orderCity} onCha>
+                            <select value={orderCity} onChange={(e) => setOrderCity(e.target.value)}>
+                                <option></option>
                                 <option>UZ VIETAS</option>
                                 <option>Rīga</option>
                                 <option>Jūrmala</option>

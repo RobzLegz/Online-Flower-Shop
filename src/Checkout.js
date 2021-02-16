@@ -5,11 +5,20 @@ import { useStateValue } from './StateProvider';
 import TotalCost from './TotalCost';
 import DoneIcon from '@material-ui/icons/Done';
 import CheckoutInfo from './CheckoutInfo';
+import { getBasketTotal } from './reducer';
 
 const Checkout = () => {
 
     const [{basket}, dispatch] = useStateValue();
-    const [checkoutState, setCheckoutState] = useState("hiddenCheckoutInfo")
+    const [checkoutState, setCheckoutState] = useState("hiddenCheckoutInfo");
+
+    const checkIfBasketEmpty = () => {
+        if(getBasketTotal(basket) === 0){
+            alert("Jūsu grozs ir tukšs");
+            return;            
+        }
+        setCheckoutState("checkoutInfo");
+    }
 
     return (
         <div className="checkout">
@@ -28,7 +37,7 @@ const Checkout = () => {
                 ))}
             </div>
             <div className="checkoutButtonClontainer">
-                <button onClick={() => setCheckoutState("checkoutInfo")}><DoneIcon />Pasūtīt</button>
+                <button onClick={checkIfBasketEmpty}><DoneIcon />Pasūtīt</button>
             </div>
             <CheckoutInfo checkoutState={checkoutState} setCheckoutState={setCheckoutState} />
         </div>

@@ -23,10 +23,6 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
 
     const registerOrder = (e) => {
         e.preventDefault();        
-        if(getBasketTotal(basket) === 0){
-            alert("Jūsu grozs ir tukšs");
-            return;            
-        }
         if(orderName === ""){
             alert("Lūdzu norādiet savu vārdu!");
             return;

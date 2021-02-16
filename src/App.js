@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
 import LoginPage from './LoginPage';
+import OrdersPage from './OrdersPage';
 import PrivacyPage from './PrivacyPage';
 
 const App = () => {
@@ -21,6 +22,10 @@ const App = () => {
             <Header />
             <PrivacyPage />
             <Footer />
+          </Route>
+          <Route path="/orders">
+            <Header />
+            <OrdersPage />
           </Route>
           <Route path="/login">
             <Header />

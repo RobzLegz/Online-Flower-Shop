@@ -138,3 +138,12 @@ input[type="number"] {
   height: 15px;
   cursor: pointer;
 }
+.selectCityContainer {
+  display: flex;
+  align-items: center;
+}
+.selectCityContainer > select {
+  margin-left: 10px;
+  height: 30px;
+  width: 100px;
+}

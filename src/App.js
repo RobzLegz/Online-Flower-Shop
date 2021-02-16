@@ -5,6 +5,7 @@ import Checkout from './Checkout';
 import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
+import LoginPage from './LoginPage';
 import PrivacyPage from './PrivacyPage';
 
 const App = () => {
@@ -20,6 +21,10 @@ const App = () => {
             <Header />
             <PrivacyPage />
             <Footer />
+          </Route>
+          <Route path="/login">
+            <Header />
+            <LoginPage />
           </Route>
           <Route path="/" >
             <Header />

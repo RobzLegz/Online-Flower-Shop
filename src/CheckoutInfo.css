@@ -146,4 +146,5 @@ input[type="number"] {
   margin-left: 10px;
   height: 30px;
   width: 100px;
+  cursor: pointer;
 }

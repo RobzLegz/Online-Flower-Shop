@@ -25,7 +25,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const onSpotTake = () => {
         setOrderAddress("UZ VIETAS");
         setOrderCity("UZ VIETAS");
-    }
+    };
 
     const registerOrder = (e) => {
         e.preventDefault();        
@@ -57,9 +57,9 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             orderDate: calendarValue,
             order: basket,
             orderValue: getBasketTotal(basket) + "€",            
-        })
-        alert("Pasūtījums noformēts")
-    }
+        });
+        alert("Pasūtījums noformēts");
+    };
 
     return (
         <div className={checkoutState}>

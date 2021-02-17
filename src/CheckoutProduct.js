@@ -19,8 +19,7 @@ const CheckoutProduct = ({id, image, title, price}) => {
             <img src={image} alt={title} className="checkout-image"/>
             <div className="checkout-product-info">
                 <h4 className="checkout-product-title">{title}</h4>
-                <p className="checkout-product-price"><strong>{price}€</strong></p>
-                
+                <p className="checkout-product-price"><strong>{price}€</strong></p>                
             </div>
             <button onClick={removeCartItem}><DeleteIcon /></button>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
@@ -27,6 +27,26 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         setOrderCity("UZ VIETAS");
     };
 
+    const orderAprooved = () => {
+        setOrderEmail("");
+        setOrderName("");
+        setOrderPhoneNumber("");
+        setOrderAddress("");
+        db.collection("orders").add({
+            name: orderName,
+            email: orderEmail,
+            number: orderPhoneNumber,
+            address: orderAddress,
+            orderDate: calendarValue,
+            order: basket,
+            orderValue: getBasketTotal(basket) + "€",            
+        });
+        alert("Pasūtījums noformēts");
+        dispatch({
+            type: "EMPTY_BASKET",
+        });
+    };
+
     const registerOrder = (e) => {
         e.preventDefault();        
         if(orderName === ""){
@@ -45,20 +65,15 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             alert("Uz šodienu pasūtījumu nevar veikt!");
             return;
         }
-        setOrderEmail("");
-        setOrderName("");
-        setOrderPhoneNumber("");
-        setOrderAddress("");
-        db.collection("orders").add({
-            name: orderName,
-            email: orderEmail,
-            number: orderPhoneNumber,
-            address: orderAddress,
-            orderDate: calendarValue,
-            order: basket,
-            orderValue: getBasketTotal(basket) + "€",            
-        });
-        alert("Pasūtījums noformēts");
+        if(orderAddress === orderCity && orderCity === "UZ VIETAS"){
+            orderAprooved();
+        }else if(orderAddress !== orderCity && orderCity !== "UZ VIETAS" && orderAddress !== "UZ VIETAS"){
+            orderAprooved();
+        }else{
+            alert("Norādiet Saņemšanas pilsētu un adresi");
+            return;
+        }
+        
     };
 
     return (

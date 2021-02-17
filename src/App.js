@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Checkout from './Checkout';
+import { orderUrl } from './constants';
 import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
@@ -23,7 +24,7 @@ const App = () => {
             <PrivacyPage />
             <Footer />
           </Route>
-          <Route path="/orders">
+          <Route path={`/orders${orderUrl}`}>
             <Header />
             <OrdersPage />
           </Route>

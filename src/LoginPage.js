@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { password, userName } from './constants';
+import { orderUrl, password, userName } from './constants';
 import "./LoginPage.css";
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
     const checkLogin = (e) => {
         e.preventDefault();
         if(usernameInput === userName && passwordInput === password){
-            history.push("/orders");
+            history.push(`/orders${orderUrl}`);
         }else{
             alert("Nepaireizs lietotājvārds vai parole");
         }

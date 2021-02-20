@@ -15,6 +15,7 @@ const EachOrder = ({recieverPhone,recieverEmail,recieverName,address,email,name,
                 <h5>{recieverName}</h5>
                 <small>{recieverEmail}</small>                
                 <p>{recieverPhone}</p>
+                <small>Datums: {new Date(orderDate?.toDate()).toLocaleString().slice(0, -13)}</small>
             </div>
             <div className="orderDetails">
                 <h4>{orderValue}</h4>

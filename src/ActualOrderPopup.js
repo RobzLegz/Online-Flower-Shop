@@ -5,7 +5,19 @@ const ActualOrderPopup = ({address,email,name,phone,actualOrder,orderDate,orderV
     return (
         <StyledPopup>
             <StyledPopupInsideDiv>
-                <h1>{address}</h1>
+                <StyledPriceContainer>
+                    <h2>Cena: {orderValue}</h2>
+                </StyledPriceContainer>
+                <StyledPopupRecieverInfo>
+                    <h2>Saņēmējs: {recieverName}</h2>
+                </StyledPopupRecieverInfo>     
+                <StyledPopupRecieverInfo>
+                    <h3>Saņēmēja numurs: {recieverPhone}</h3>
+                </StyledPopupRecieverInfo>                              
+                <StyledPopupRecieverInfo>
+                    <h4>Saņēmēja e-pasts: {recieverEmail}</h4>
+                </StyledPopupRecieverInfo>    
+                <h2>Datums: {new Date(orderDate?.toDate()).toLocaleString().slice(0, -13)}</h2>
             </StyledPopupInsideDiv>
         </StyledPopup>
     )
@@ -26,6 +38,12 @@ const StyledPopupInsideDiv = styled.div`
     width: 80%;
     height:80%;
     background:#fff;
+`;
+const StyledPopupRecieverInfo = styled.div`
+    display:flex;
+`;
+const StyledPriceContainer = styled.div`
+
 `;
 
 export default ActualOrderPopup;

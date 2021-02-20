@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import "./CheckoutInfo.css";
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import TotalCost from './TotalCost';
@@ -17,9 +17,9 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [orderEmail, setOrderEmail] = useState("");
     const [orderPhoneNumber, setOrderPhoneNumber] = useState("");
     const [orderAddress, setOrderAddress] = useState("");
-    const [orderButtonState, setOrderButtonState] = useState(false)
+    const [orderButtonState, setOrderButtonState] = useState(false);
     const [{basket}, dispatch] = useStateValue();
-    const [calendarValue, setCalendarValue] = useState(new Date());
+    const [calendarValue, setCalendarValue] = useState();
     const [orderCity, setOrderCity] = useState("");
     const [orderRecieverName, setOrderRecieverName] = useState("");
     const [orderRecieverNumber, setOrderRecieverNumber] = useState("");

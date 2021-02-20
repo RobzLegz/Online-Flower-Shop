@@ -24,7 +24,7 @@ const OrdersPage = () => {
                         email={order.email} 
                         name={order.name}
                         phone={order.number}
-                        actualOrder={order.order}
+                        actualOrder={order.order[0]?.title}
                         orderDate={order.orderDate}
                         orderValue={order.orderValue}
                     />

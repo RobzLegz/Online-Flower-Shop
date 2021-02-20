@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ActualOrderPopup from './ActualOrderPopup';
 import "./EachOrder.css";
 
 const EachOrder = ({address,email,name,phone,actualOrder,orderDate,orderValue}) => {
+
+    const [orderPopupState, setOrderPopupState] = useState(false);
+
     return (
         <div className="eachOrderContainer">
             <div className="aboutOrder">
@@ -14,8 +18,9 @@ const EachOrder = ({address,email,name,phone,actualOrder,orderDate,orderValue}) 
             </div>
             <div className="orderDetails">
                 <h4>{orderValue}</h4>
-                <button>Apskatīt</button>
+                <button onClick={() => setOrderPopupState(true)}>Apskatīt</button>
             </div>
+            {orderPopupState && <ActualOrderPopup setOrderPopupState={setOrderPopupState} />}
         </div>
     )
 }

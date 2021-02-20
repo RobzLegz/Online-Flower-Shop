@@ -27,6 +27,9 @@ const OrdersPage = () => {
                         actualOrder={order.order[0]?.title}
                         orderDate={order.orderDate}
                         orderValue={order.orderValue}
+                        recieverName={order.recieverName}
+                        recieverEmail={order.recieverEmail}
+                        recieverPhone={order.recieverNumber}
                     />
                 ))}
             </div>

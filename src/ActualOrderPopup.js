@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ActualOrderPopup = ({setOrderPopupState}) => {
+const ActualOrderPopup = ({address,email,name,phone,actualOrder,orderDate,orderValue,recieverPhone,recieverEmail,recieverName,setOrderPopupState}) => {
     return (
         <StyledPopup>
             <StyledPopupInsideDiv>
-                
+                <h1>{address}</h1>
             </StyledPopupInsideDiv>
         </StyledPopup>
     )

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ActualOrderPopup from './ActualOrderPopup';
 import "./EachOrder.css";
 
-const EachOrder = ({address,email,name,phone,actualOrder,orderDate,orderValue}) => {
+const EachOrder = ({recieverPhone,recieverEmail,recieverName,address,email,name,phone,actualOrder,orderDate,orderValue}) => {
 
     const [orderPopupState, setOrderPopupState] = useState(false);
 
@@ -12,15 +12,29 @@ const EachOrder = ({address,email,name,phone,actualOrder,orderDate,orderValue}) 
                 <p>{address}</p>
             </div>
             <div className="userInfo">
-                <h5>{name}</h5>
-                <small>{email}</small>                
-                <p>{phone}</p>
+                <h5>{recieverName}</h5>
+                <small>{recieverEmail}</small>                
+                <p>{recieverPhone}</p>
             </div>
             <div className="orderDetails">
                 <h4>{orderValue}</h4>
                 <button onClick={() => setOrderPopupState(true)}>Apskatīt</button>
             </div>
-            {orderPopupState && <ActualOrderPopup setOrderPopupState={setOrderPopupState} />}
+            {orderPopupState && 
+                <ActualOrderPopup 
+                    setOrderPopupState={setOrderPopupState} 
+                    address={address}
+                    email={email}
+                    name={name}
+                    phone={phone}
+                    actualOrder={actualOrder}
+                    orderDate={orderDate}
+                    orderValue={orderValue}
+                    recieverPhone={recieverPhone}
+                    recieverEmail={recieverEmail}
+                    recieverName={recieverName}
+                />
+            }
         </div>
     )
 }

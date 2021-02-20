@@ -21,6 +21,9 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [{basket}, dispatch] = useStateValue();
     const [calendarValue, setCalendarValue] = useState(new Date());
     const [orderCity, setOrderCity] = useState("");
+    const [orderRecieverName, setOrderRecieverName] = useState("");
+    const [orderRecieverNumber, setOrderRecieverNumber] = useState("");
+    const [orderRecieverEmail, setOrderRecieverEmail] = useState("");
     var currentDate = new Date();
 
     const onSpotTake = () => {
@@ -62,7 +65,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         }else if(orderAddress === ""){
             alert("Lūdzu norādiet savu adresi!");
             return;
-        }else if(calendarValue === new Date()) {
+        }else if(calendarValue === currentDate) {
             alert("Uz šodienu pasūtījumu nevar veikt!");
             return;
         }
@@ -82,13 +85,21 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             <div className="checkoutForm">
                 <button onClick={() => setCheckoutState("hiddenCheckoutInfo")}><KeyboardReturnIcon />Atpakaļ</button>
                 <h2>Apmaksāt</h2>
+                <div className="totalCostComponent">
+                    <TotalCost />
+                </div>
                 <div className="checkoutInputs">
                     <form className="checkoutInputs">
-                        <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Vārds" autoComplete="off" required name="name" />
-                        <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="E-pasts" required name="email" />
-                        <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Telefona nr." required name="phone" />
+                        <input type="text" value={orderName} onChange={(e) => setOrderName(e.target.value)} placeholder="Jūsu vārds" autoComplete="off" required name="name" />
+                        <input type="email" value={orderEmail} onChange={(e) => setOrderEmail(e.target.value)} placeholder="Jūsu E-pasts" required name="email" />
+                        <input type="number" value={orderPhoneNumber} onChange={(e) => setOrderPhoneNumber(e.target.value)} placeholder="Jūsu telefona nr." required name="phone" />
+                        <br/>
+                        <br/>
+                        <input type="text" value={orderRecieverName} onChange={(e) => setOrderRecieverName(e.target.value)} placeholder="Saņēmēja vārds" autoComplete="off" required name="name" />
+                        <input type="email" value={orderRecieverEmail} onChange={(e) => setOrderRecieverEmail(e.target.value)} placeholder="Saņēmēja E-pasts" name="email" />
+                        <input type="number" value={orderRecieverNumber} onChange={(e) => setOrderRecieverNumber(e.target.value)} placeholder="Saņēmēja telefona nr." required name="phone" />
                         <div className="selectCityContainer">
-                            <h4>Pilsēta:</h4>
+                            <h4>Saņemšanas pilsēta:</h4>
                             <select value={orderCity} onChange={(e) => setOrderCity(e.target.value)}>
                                 <option></option>
                                 <option>UZ VIETAS</option>
@@ -96,11 +107,12 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                                 <option>Jūrmala</option>
                             </select>
                         </div>
-                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Adrese" required autoComplete="off" />
+                        <input type="text" value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)} placeholder="Saņēmēja adrese" required autoComplete="off" />
                         <div className="onSpotContainer">
                             <p>Saņemšu uz vietas</p>
                             <input type="checkbox" value={orderAddress} onChange={onSpotTake}  required />
                         </div>
+                        <h2 className="reciever-heading">Saņemšanas datums</h2>
                         <Calendar
                             onChange={setCalendarValue}
                             value={calendarValue}
@@ -122,9 +134,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                     </form>
                 </div>
             </div>
-            <div className="totalCostComponent">
-                <TotalCost />
-            </div>
+            
         </div>
     )
 }

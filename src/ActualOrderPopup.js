@@ -10,7 +10,10 @@ const ActualOrderPopup = ({address,email,name,phone,actualOrder,orderDate,orderV
                 </StyledPriceContainer>
                 <StyledPopupRecieverInfo>
                     <h2>Saņēmējs: {recieverName}</h2>
-                </StyledPopupRecieverInfo>     
+                </StyledPopupRecieverInfo>    
+                <StyledPopupRecieverInfo>
+                    <h2>Saņēmēja adrese: {address}</h2>
+                </StyledPopupRecieverInfo>   
                 <StyledPopupRecieverInfo>
                     <h3>Saņēmēja telefons: {recieverPhone}</h3>
                 </StyledPopupRecieverInfo>                              
@@ -18,11 +21,26 @@ const ActualOrderPopup = ({address,email,name,phone,actualOrder,orderDate,orderV
                     <h4>Saņēmēja e-pasts: {recieverEmail}</h4>
                 </StyledPopupRecieverInfo>    
                 <StyledPopupRecieverInfo>
-                    <h2>Pasūtījuma datums: {new Date(orderDate?.toDate()).toLocaleString().slice(0, -13)}</h2>                    
+                    <h2>Piegādes datums: {new Date(orderDate?.toDate()).toLocaleString().slice(0, -13)}</h2>                    
                 </StyledPopupRecieverInfo>
-                <StyledButtonClose onClick={() => setOrderPopupState(false)}>
-                    Aizvērt
-                </StyledButtonClose>
+                <StyledButtonClose onClick={() => setOrderPopupState(false)}>Aizvērt</StyledButtonClose>
+                <StyledPopupRecieverInfo>
+                    <h3>Pasūtītājs: {name}</h3>
+                </StyledPopupRecieverInfo> 
+                <StyledPopupRecieverInfo>
+                    <h3>Pasūtītāja telefons: {phone}</h3>
+                </StyledPopupRecieverInfo> 
+                <StyledPopupRecieverInfo>
+                    <h3>Pasūtītāja e-pasts: {email}</h3>
+                </StyledPopupRecieverInfo> 
+                <h2 style={{textAlign: "center", fontSize: "2rem",margin:"10px 0"}}>Pasūtījums:</h2>
+                {actualOrder.map((order) => (
+                    <AboutOrderContainer>
+                        <img src={order.image} alt={order.title}/>
+                        <h2 style={{margin: "0 20px"}}>{order.title}</h2>
+                        <h3>{order.price}‎€</h3>
+                    </AboutOrderContainer> 
+                ))}                                
             </StyledPopupInsideDiv>
         </StyledPopup>
     )
@@ -30,9 +48,9 @@ const ActualOrderPopup = ({address,email,name,phone,actualOrder,orderDate,orderV
 const StyledPopup = styled.div`
     position:absolute;
     background: rgba(0,0,0,0.2);
-    width:80%;
-    height:100vh;
-    margin:0 10%;
+    width:100%;
+    min-height:100vh;
+    padding:5% 0;
     left:0;
     top:0;
     display:flex;
@@ -40,8 +58,9 @@ const StyledPopup = styled.div`
     align-items:center;
 `;
 const StyledPopupInsideDiv = styled.div`
-    width: 80%;
-    height:80%;
+    width: 60%;
+    min-height:80%;
+    max-height:fit-content;
     background:#fff;
     position: relative;
 `;
@@ -73,6 +92,20 @@ const StyledButtonClose = styled.button`
     color:#fff;
     font-size:1rem;
     cursor: pointer;;
+`;
+const AboutOrderContainer = styled.div`
+    height:fit-content;
+    background-color:#f9f9f9;
+    border-bottom:1px solid lightgrey;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    padding:20px 0;
+    >img{
+        width:100px;
+        object-fit:cover;
+        height:100px;
+    }
 `;
 
 export default ActualOrderPopup;

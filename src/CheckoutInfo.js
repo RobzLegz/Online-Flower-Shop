@@ -40,6 +40,9 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
             name: orderName,
             email: orderEmail,
             number: orderPhoneNumber,
+            recieverName: orderRecieverName,
+            recieverNumber: orderRecieverNumber,
+            recieverEmail: orderRecieverEmail,
             address: orderAddress,
             orderDate: calendarValue,
             order: basket,
@@ -49,6 +52,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         dispatch({
             type: "EMPTY_BASKET",
         });
+        history.push("/");
     };
 
     const registerOrder = (e) => {
@@ -68,6 +72,12 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         }else if(calendarValue === currentDate) {
             alert("Uz šodienu pasūtījumu nevar veikt!");
             return;
+        }else if(orderRecieverNumber === ""){
+            alert("Lūdzu norādiet saņēmēja telefona numuru!");
+            return;
+        }else if(orderRecieverName === ""){
+            alert("Lūdzu norādiet saņēmēja vārdu!");
+            return;
         }
         if(orderAddress === orderCity && orderCity === "UZ VIETAS"){
             orderAprooved();
@@ -76,8 +86,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
         }else{
             alert("Norādiet Saņemšanas pilsētu un adresi");
             return;
-        }
-        
+        }        
     };
 
     return (

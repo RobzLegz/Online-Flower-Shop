@@ -8,7 +8,7 @@ const OrdersPage = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        db.collection("orders").orderBy("orderDate", "desc").onSnapshot((snapshot) => (
+        db.collection("orders").orderBy("orderDate", "asc").onSnapshot((snapshot) => (
             setAllOrders(snapshot.docs.map((doc) => doc.data()))
         ))
     }, []);

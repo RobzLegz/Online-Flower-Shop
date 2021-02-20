@@ -21,6 +21,7 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
     const [{basket}, dispatch] = useStateValue();
     const [calendarValue, setCalendarValue] = useState(new Date());
     const [orderCity, setOrderCity] = useState("");
+    var currentDate = new Date();
 
     const onSpotTake = () => {
         setOrderAddress("UZ VIETAS");
@@ -110,7 +111,8 @@ const CheckoutInfo = ({checkoutState, setCheckoutState}) => {
                             maxDetail="month"
                             defaultView="month"
                             tileDisabled={({ date }) => date.getDay() === 0}
-                            minDate={new Date() }
+                            minDate={currentDate}
+                            activeStartDate={currentDate}
                         />
                         <div className="checkbox-container">
                             <p>Es piekrītu noteikumiem un <strong onClick={() => history.push("/privacy")}>privātuma politikai</strong></p>

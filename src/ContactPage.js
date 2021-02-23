@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core';
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import emailjs from 'emailjs-com';
 
 const ContactPage = () => {
 
@@ -11,6 +12,11 @@ const ContactPage = () => {
 
     const sendMessage = (e) => {
         e.preventDefault();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID').then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
         setSenderName("");
         setSendingReason("");
         setSenderEmail("");
@@ -20,10 +26,10 @@ const ContactPage = () => {
     return (
         <ContactForm>
             <ContactContainer>
-                <ContactInput value={senderName} onChange={(e) => setSenderName(e.target.value)} type="text" required placeholder="Vārds" />
-                <ContactInput value={sendingReason} onChange={(e) => setSendingReason(e.target.value)} type="text" required placeholder="Temats" />
-                <ContactInput value={sendedrEmail} onChange={(e) => setSenderEmail(e.target.value)} type="email" required placeholder="e-pasts" />
-                <ContactMessageBox value={messageStete} onChange={(e) => setMessageState(e.target.value)} required placeholder="Jautājums" />
+                <ContactInput name="name" value={senderName} onChange={(e) => setSenderName(e.target.value)} type="text" required placeholder="Vārds" />
+                <ContactInput name="context" value={sendingReason} onChange={(e) => setSendingReason(e.target.value)} type="text" required placeholder="Temats" />
+                <ContactInput name="mail" value={sendedrEmail} onChange={(e) => setSenderEmail(e.target.value)} type="email" required placeholder="e-pasts" />
+                <ContactMessageBox name="message" value={messageStete} onChange={(e) => setMessageState(e.target.value)} required placeholder="Jautājums" />
                 <ContactButton onClick={sendMessage} type="submit">Nosūtīt</ContactButton>
             </ContactContainer>
         </ContactForm>

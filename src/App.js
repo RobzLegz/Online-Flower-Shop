@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Checkout from './Checkout';
 import { orderUrl } from './constants';
+import ContactPage from './ContactPage';
 import Footer from './Footer';
 import Header from './Header';
 import Home from './Home';
@@ -18,6 +19,10 @@ const App = () => {
           <Route path="/checkout" >
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/contact" >
+            <Header />
+            <ContactPage />
           </Route>
           <Route path="/privacy">
             <Header />
